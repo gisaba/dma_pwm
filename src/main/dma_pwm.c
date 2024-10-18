@@ -55,10 +55,8 @@
 // Check if debug logs are enabled:
 #ifndef DEBUG
     // Set to false:
-    #define DEBUG 0
+    #define DEBUG 1
 #endif
-
- #define DEBUG 1
 
 // Rounding functions:
 #define ROUND(n) (((n) - (int)(n) < 0.5) ? (int)(n) : (int)((n) + 1))

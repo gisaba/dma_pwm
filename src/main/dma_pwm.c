@@ -72,6 +72,9 @@
 #define BCM2711_PERI_BASE_PHYS_ADDR 0xFE000000
 #define BCM2711_PERI_BASE_BUS_ADDR  0x7E000000
 
+#define BCM2712_PERI_BASE_PHYS_ADDR 0xFE000000
+#define BCM2712_PERI_BASE_BUS_ADDR  0x7E000000
+
 // PWM clock manager register offset:
 #define PWM_CLK 0xA0
 
@@ -467,10 +470,13 @@ static int init_pwm() {
         // Set BCM base addresses:
         bcm_peri_base_phys_addr = BCM2837_PERI_BASE_PHYS_ADDR;
         bcm_peri_base_bus_addr = BCM2837_PERI_BASE_BUS_ADDR;
-    } else if ((pi_version == 4) || (pi_version == 5)) {
+    } else if (pi_version == 4) {
         // Set BCM base addresses:
         bcm_peri_base_phys_addr = BCM2711_PERI_BASE_PHYS_ADDR;
         bcm_peri_base_bus_addr = BCM2711_PERI_BASE_BUS_ADDR;
+    } else if (pi_version == 5) {
+        bcm_peri_base_phys_addr = BCM2712_PERI_BASE_PHYS_ADDR;
+        bcm_peri_base_bus_addr = BCM2712_PERI_BASE_BUS_ADDR;
     // Did not find PI version:
     } else {
         // Debug logs:
@@ -531,7 +537,7 @@ static int init_pwm() {
     dma_ctl_base_virt_addr = map_peripheral__(dma_ctl_base_phys_addr);
     pwm_ctl_base_virt_addr = map_peripheral__(pwm_ctl_base_phys_addr);
     pwm_clk_base_virt_addr = map_peripheral__(pwm_clk_base_phys_addr);
-    
+
     // Abort if mapped incorrectly:
     if ((gpio_base_virt_addr == NULL) || (dma_ctl_base_virt_addr == NULL) || \
        (pwm_ctl_base_virt_addr == NULL) || (pwm_clk_base_virt_addr == NULL)) {

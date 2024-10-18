@@ -55,7 +55,7 @@
 // Check if debug logs are enabled:
 #ifndef DEBUG
     // Set to false:
-    #define DEBUG 0
+    #define DEBUG 1
 #endif
 
 // Rounding functions:

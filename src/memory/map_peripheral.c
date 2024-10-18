@@ -73,6 +73,7 @@ volatile uint32_t* map_peripheral__(uint32_t base_addr) {
 
     // Check success:
     if (virt_addr == MAP_FAILED) {
+        printf("virt_addr ==  MAP_FAILED\n");
         // Exit with error:
         return NULL;
     }

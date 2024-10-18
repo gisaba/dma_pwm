@@ -58,6 +58,8 @@
     #define DEBUG 0
 #endif
 
+ #define DEBUG 1
+
 // Rounding functions:
 #define ROUND(n) (((n) - (int)(n) < 0.5) ? (int)(n) : (int)((n) + 1))
 #define CEILING(n) ((int)(n) + 1)

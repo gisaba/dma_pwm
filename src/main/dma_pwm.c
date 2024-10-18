@@ -530,11 +530,11 @@ static int init_pwm() {
     gpio_base_virt_addr = map_peripheral__(gpio_base_phys_addr);
     printf("Ok: map_peripheral()%p\n", gpio_base_virt_addr);
     dma_ctl_base_virt_addr = map_peripheral__(dma_ctl_base_phys_addr);
-    printf("Ok: map_peripheral()%p\n", dma_ctl_base_virt_addr\n);
+    printf("Ok: map_peripheral()%p\n", dma_ctl_base_virt_addr);
     pwm_ctl_base_virt_addr = map_peripheral__(pwm_ctl_base_phys_addr);
-    printf("Ok: map_peripheral()%p\n", pwm_ctl_base_virt_addr\n);
+    printf("Ok: map_peripheral()%p\n", pwm_ctl_base_virt_addr);
     pwm_clk_base_virt_addr = map_peripheral__(pwm_clk_base_phys_addr);
-    printf("Ok: map_peripheral()%p\n", pwm_clk_base_virt_addr\n);
+    printf("Ok: map_peripheral()%p\n", pwm_clk_base_virt_addr);
 
     // Abort if mapped incorrectly:
     if ((gpio_base_virt_addr == NULL) || (dma_ctl_base_virt_addr == NULL) || \

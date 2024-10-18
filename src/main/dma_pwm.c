@@ -467,7 +467,7 @@ static int init_pwm() {
         // Set BCM base addresses:
         bcm_peri_base_phys_addr = BCM2837_PERI_BASE_PHYS_ADDR;
         bcm_peri_base_bus_addr = BCM2837_PERI_BASE_BUS_ADDR;
-    } else if (pi_version == 4) {
+    } else if ((pi_version == 4) || (pi_version == 5) ) {
         // Set BCM base addresses:
         bcm_peri_base_phys_addr = BCM2711_PERI_BASE_PHYS_ADDR;
         bcm_peri_base_bus_addr = BCM2711_PERI_BASE_BUS_ADDR;

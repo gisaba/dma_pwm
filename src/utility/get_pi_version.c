@@ -247,7 +247,7 @@ static struct pi_version_struct pi_version[] = {
     },
     // Pi 5 Model
     {
-        ..revision_string = "d04170",
+        .revision_string = "d04170",
         .version = 5
     }
 };
